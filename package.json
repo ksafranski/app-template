@@ -1,0 +1,24 @@
+{
+  "name": "node-template",
+  "version": "0.0.1",
+  "description": "Base template for node (and front-end) applications",
+  "main": "index.js",
+  "author": "Kent Safranski (fluidbyte)",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run beautify && npm run lint && npm run mocha",
+    "mocha": "mocha test/**/*.js",
+    "lint": "eslint lib",
+    "beautify": "js-beautify -f ./lib/*.js -r --config .jsbeautifyrc",
+    "doc": "jsdoc -r -d docs lib --verbose -R README.md",
+    "plato": "plato -r -d report lib"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "eslint": "^0.18.0",
+    "js-beautify": "^1.5.5",
+    "jsdoc": "3.3.0-beta3",
+    "mocha": "^2.2.4",
+    "plato": "^1.4.0"
+  }
+}
