@@ -45,31 +45,25 @@ In the above case environment variables like `MYAPP_BAZ_QUZ=buzz` would change t
 Unit tests are setup using [Mocha](http://mochajs.org/) with the [Chai Assertion 
 Library](http://chaijs.com/).
 
-Running tests are the standard `npm run test` which includes linting and 
-beautification. It can also be run independent of other tasks via `npm run mocha`.
+Running tests are the standard `npm run test` which also includes linting. It 
+can also be run independent of other tasks via `npm run mocha`.
 
 ## Static Analysis
 
 ### Linting
 
-Static analysis testing is done with [ESLint](http://eslint.org/) and will run 
-along with the tests (`npm run test`). It can also be run independetly with 
-the `npm run lint` command.
+Static analysis testing is done with [JSCS](https://github.com/jscs-dev/node-jscs) 
+and will run along with the tests (`npm run test`). It can also be run independetly
+with the `npm run lint` command. It includes the `--fix` command which will attempt 
+to fix linting errors as well.
 
-Configuration is in the `.eslintrc` file.
+Configuration is in the `.jscsrc` file. The default preset is `crockford` with 
+several exceptions but can be easily changed as desired.
 
 ### Analysis
 
 Additionally [Plato Code Analyzer](https://www.npmjs.com/package/plato) is setup 
 to build reports for code analysis. It can be run via the command `npm run plato`.
-
-## Beautification
-
-JavaScript beautification is done with [JSBeautifier](https://www.npmjs.com/package/js-beautify) 
-along with the test (`npm run test`). It can also be run independetly with the
-`npm run beautify` command.
-
-Configuration is in the `.jsbeautifyrc` file.
 
 ## Documentation
 

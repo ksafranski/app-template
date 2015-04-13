@@ -1,0 +1,6 @@
+{
+	"preset": "crockford",
+	"validateIndentation": null,
+	"requireMultipleVarDecl": null,
+	"requireLineFeedAtFileEnd": null
+}
