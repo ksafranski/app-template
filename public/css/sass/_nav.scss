@@ -1,0 +1,45 @@
+nav.header-menu {
+  position: fixed;
+  right: 1em;
+  top: 2.4em;
+  
+  ul {
+    li {
+      display: inline-block;
+      a {
+        font-size: 1.2em;
+        display: inline-block;
+        padding: 0 1.5em;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: $break-mobile) {
+  nav.header-menu {
+    width: 20em;
+    height: 100%;
+    left: -20em;
+    background: #666;
+    top: 6em;
+    padding-top: 1em;
+    transition: .5s ease left;
+    
+    &.menu-open {
+      left: 0;
+    }
+    
+    ul {
+      li {
+        display: block;
+        a {
+          display: block;
+          font-size: 1.5em;
+          padding: .5em .8em;
+        }
+      }
+    }
+    
+  }
+}

@@ -10,13 +10,18 @@
     "mocha": "mocha test/**/*.js",
     "lint": "jscs --fix lib/",
     "doc": "jsdoc -r -d docs lib --verbose -R README.md",
-    "plato": "plato -r -d report lib"
+    "plato": "plato -r -d report lib",
+    "sass": "node-sass public/css/sass/screen.scss public/css/screen.css"
   },
   "devDependencies": {
     "chai": "^2.2.0",
     "jscs": "^1.12.0",
     "jsdoc": "3.3.0-beta3",
     "mocha": "^2.2.4",
+    "node-sass": "^2.1.1",
     "plato": "^1.4.0"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
   }
 }

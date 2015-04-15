@@ -1,0 +1,282 @@
+@import url("//fonts.googleapis.com/css?family=Droid+Sans:400,700");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+/* line 1, sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 13, sass/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 14, sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 17, sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 18, sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 19, sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 21, sass/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 22, sass/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 23, sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* select funkyness */
+/* line 26, sass/_reset.scss */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 32, sass/_reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1, sass/_global.scss */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+/* line 9, sass/_global.scss */
+html body {
+  font-family: "Droid Sans", "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+}
+
+/* Links */
+/* line 23, sass/_global.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 28, sass/_global.scss */
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* Headings */
+/* line 34, sass/_global.scss */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: .5em 0;
+  font-weight: normal;
+}
+
+/* line 40, sass/_global.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 44, sass/_global.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 48, sass/_global.scss */
+h3 {
+  font-size: 1.7em;
+}
+
+/* line 52, sass/_global.scss */
+h4 {
+  font-size: 1.4em;
+}
+
+/* line 56, sass/_global.scss */
+h5 {
+  font-size: 1.2em;
+}
+
+/* line 1, sass/_header.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #666;
+  color: #fff;
+  padding: 1.1em;
+}
+/* line 12, sass/_header.scss */
+header h1 .header-menu-toggle {
+  display: none;
+  margin-right: .2em;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  /* line 19, sass/_header.scss */
+  header h1 .fa-bars {
+    display: inline-block;
+  }
+}
+
+/* Push body padding by header height */
+/* line 29, sass/_header.scss */
+html body {
+  padding-top: 10em;
+}
+
+/* line 1, sass/_nav.scss */
+nav.header-menu {
+  position: fixed;
+  right: 1em;
+  top: 2.4em;
+}
+/* line 7, sass/_nav.scss */
+nav.header-menu ul li {
+  display: inline-block;
+}
+/* line 9, sass/_nav.scss */
+nav.header-menu ul li a {
+  font-size: 1.2em;
+  display: inline-block;
+  padding: 0 1.5em;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 20, sass/_nav.scss */
+  nav.header-menu {
+    width: 20em;
+    height: 100%;
+    left: -20em;
+    background: #666;
+    top: 6em;
+    padding-top: 1em;
+    transition: .5s ease left;
+  }
+  /* line 29, sass/_nav.scss */
+  nav.header-menu.menu-open {
+    left: 0;
+  }
+  /* line 34, sass/_nav.scss */
+  nav.header-menu ul li {
+    display: block;
+  }
+  /* line 36, sass/_nav.scss */
+  nav.header-menu ul li a {
+    display: block;
+    font-size: 1.5em;
+    padding: .5em .8em;
+  }
+}
+/* line 1, sass/_form.scss */
+form {
+  display: block;
+}
+/* line 5, sass/_form.scss */
+form input, form textarea, form select, form button {
+  font-family: "Droid Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: .5em .8em;
+  outline: none;
+  transition: .3s ease border-color;
+  margin-bottom: .5em;
+}
+/* line 20, sass/_form.scss */
+form input:focus, form textarea:focus, form select:focus, form button:focus {
+  border-color: #999;
+}
+/* line 26, sass/_form.scss */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .3em;
+}
+/* line 32, sass/_form.scss */
+form button {
+  width: auto;
+  display: inline-block;
+  margin-right: 1em;
+  margin-top: 1.5em;
+  padding: .5em 1.5em;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* line 42, sass/_form.scss */
+form button:hover {
+  border-color: #999;
+}
+/* line 46, sass/_form.scss */
+form button.btn-alt {
+  background-color: #e4e4e4;
+  color: #999;
+}
+/* line 53, sass/_form.scss */
+form form {
+  font-weight: normal;
+}

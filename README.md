@@ -72,6 +72,13 @@ node module is in dev dependencies.
 
 Compiling JSDoc can be done with `npm run doc`.
 
+## Sass/CSS
+
+The inclusion of [node-sass](https://github.com/sass/node-sass) allows for the 
+building of sass files in the `/public/css/sass` directory.
+
+Compiling sass to css can be done with `npm run sass`
+
 ## License
 
 All code is released under the MIT License and is free to use, modify and 

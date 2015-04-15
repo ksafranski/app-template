@@ -1,0 +1,32 @@
+header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #666;
+  color: #fff;
+  padding: 1.1em;
+  
+  h1 {
+    .header-menu-toggle {
+      display: none;
+      margin-right: .2em;
+      cursor: pointer;
+    }
+    
+    @media screen and (max-width: $break-mobile) {
+      .fa-bars {
+        display: inline-block;
+      }
+    }
+  }
+  
+}
+
+/* Push body padding by header height */
+html {
+  body {
+    padding-top: 10em;
+  }
+}

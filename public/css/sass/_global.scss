@@ -1,0 +1,58 @@
+html {
+  
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  
+  body {
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: $base-font-size;
+    line-height: 150%;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+  }
+  
+}
+
+/* Links */
+
+a, a:link, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: .5em 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
