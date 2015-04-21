@@ -11,7 +11,7 @@ header {
   h1 {
     .header-menu-toggle {
       display: none;
-      margin-right: .2em;
+      margin-right: .2rem;
       cursor: pointer;
     }
     
@@ -27,6 +27,6 @@ header {
 /* Push body padding by header height */
 html {
   body {
-    padding-top: 10em;
+    padding-top: 8rem;
   }
 }

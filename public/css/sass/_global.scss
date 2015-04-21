@@ -1,5 +1,8 @@
 html {
   
+  font-family: $base-font;
+  font-weight: normal;
+  font-size: $base-font-size;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -7,13 +10,10 @@ html {
   overflow: scroll;
   
   body {
-    font-family: $base-font;
-    font-weight: normal;
-    font-size: $base-font-size;
     line-height: 150%;
     width: 100%;
     height: 100%;
-    padding: 1.5em;
+    padding: 1.5rem;
   }
   
 }
@@ -33,26 +33,26 @@ a:hover, a:active {
 
 h1, h2, h3, h4, h5 {
   margin: 0;
-  padding: .5em 0;
+  padding: .5rem 0;
   font-weight: normal;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.7em;
+  font-size: 1.7rem;
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 h5 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }

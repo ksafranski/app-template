@@ -1,15 +1,15 @@
 nav.header-menu {
   position: fixed;
-  right: 1em;
-  top: 2.4em;
+  right: 1rem;
+  top: 1.8rem;
   
   ul {
     li {
       display: inline-block;
       a {
-        font-size: 1.2em;
+        font-size: 1.2rem;
         display: inline-block;
-        padding: 0 1.5em;
+        padding: 0 1.5rem;
       }
     }
   }
@@ -20,10 +20,10 @@ nav.header-menu {
   nav.header-menu {
     width: 20em;
     height: 100%;
-    left: -20em;
+    left: -20rem;
     background: #666;
-    top: 6em;
-    padding-top: 1em;
+    top: 5.5rem;
+    padding-top: 1rem;
     transition: .5s ease left;
     
     &.menu-open {
@@ -35,8 +35,8 @@ nav.header-menu {
         display: block;
         a {
           display: block;
-          font-size: 1.5em;
-          padding: .5em .8em;
+          font-size: 1.5rem;
+          padding: .5rem .8rem;
         }
       }
     }
