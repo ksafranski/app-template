@@ -1,8 +1,6 @@
 /**
  * @namespace validation
  */
-'use strict';
-
 var validation = {
 
   /**
@@ -10,7 +8,7 @@ var validation = {
    * @param {String} data The JSON to test
    * @returns {Boolean}
    */
-  isJSON: function isJSON(data) {
+  isJSON: function (data) {
     try {
       JSON.parse(data);
       return true;
@@ -24,20 +22,20 @@ var validation = {
    * @param {*} data The object to test
    * @returns {String}
    */
-  getType: function getType(data) {
+  getType: function (data) {
     if (data === null) {
       return 'null';
     }
     var t = typeof data;
     switch (t) {
-      case 'function':
-      case 'object':
-        if (data.constructor) {
-          return data.constructor.name.toLowerCase();
-        }
-        return ({}).prototype.toString.call(data).match(/^\[object (.+)\]$/)[1].toLowerCase();
-      default:
-        return t;
+    case 'function':
+    case 'object':
+      if (data.constructor) {
+        return data.constructor.name.toLowerCase();
+      }
+      return ({}).prototype.toString.call(data).match(/^\[object (.+)\]$/)[1].toLowerCase();
+    default:
+      return t;
     }
   },
 
@@ -47,8 +45,8 @@ var validation = {
    * @param {String} type The expected type
    * @returns {Boolean}
    */
-  isType: function isType(data, type) {
-    return validation.getType(data) === type ? true : false;
+  isType: function (data, type) {
+    return (validation.getType(data) === type) ? true : false;
   }
 
 };

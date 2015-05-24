@@ -1,5 +1,3 @@
-'use strict';
-
 var path = require('path');
 var fs = require('fs');
 
@@ -16,7 +14,7 @@ var config = {
   /**
    * Sets the config file defaults or throws
    */
-  setDefaults: function setDefaults() {
+  setDefaults: function () {
     var cfgPath = path.join(__dirname, '/../config.js');
     if (fs.existsSync(cfgPath)) {
       config.settings = require(cfgPath);
@@ -30,7 +28,7 @@ var config = {
    * Checks for (and replaces) matched env var chain
    * @property {String} envVar The environment variable chain
    */
-  checkEnv: function checkEnv(envVar) {
+  checkEnv: function (envVar) {
 
     var envVarUC = envVar.toUpperCase();
     var envVarLC = envVar.toLowerCase();
@@ -63,11 +61,11 @@ var config = {
    * Builds the settings object from base and env var's
    * @returns {Object} Configuration settings
    */
-  build: function build() {
+  build: function () {
 
     // Walks defaults and check for overrides
-    var walk = function walk(obj, p) {
-      p = p ? p + '_' : '';
+    var walk = function (obj, p) {
+      p = (p) ? p + '_' : '';
       for (var prop in obj) {
         if (typeof obj[prop] === 'object') {
           if (config.checkEnv(p + prop)) {
