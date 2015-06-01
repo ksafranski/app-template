@@ -65,7 +65,7 @@ can also be run independent of other tasks via `npm run mocha`.
 
 ### Linting
 
-Static analysis testing is done with [JSCS](https://github.com/jscs-dev/node-jscs) 
+Static analysis testing is done with [ESLint](http://eslint.org/) 
 and will run along with the tests (`npm run test`). It can also be run independetly
 with the `npm run lint` command. It includes the `--fix` command which will attempt 
 to fix linting errors as well.
