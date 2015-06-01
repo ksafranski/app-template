@@ -32,6 +32,7 @@
       "baseURL": "public",
       "packages": "public/vendor"
     },
+    "configFile": "public/js/config.js",
     "dependencies": {
       "lodash": "npm:lodash@^3.9.3"
     },
