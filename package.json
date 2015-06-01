@@ -9,15 +9,16 @@
     "test": "npm run beautify && npm run lint && npm run mocha",
     "mocha": "mocha --compilers js:babel/register test/**/*.js",
     "transpile": "babel src --out-dir lib",
-    "lint": "jscs --fix lib/",
+    "lint": "node_modules/.bin/eslint src public/js/lib",
     "doc": "jsdoc -r -d docs lib --verbose -R README.md",
     "plato": "plato -r -d report lib",
     "sass": "node-sass public/css/sass/screen.scss public/css/screen.css"
   },
   "devDependencies": {
     "babel": "^5.4.7",
+    "babel-eslint": "^3.1.1",
     "chai": "^2.2.0",
-    "jscs": "^1.12.0",
+    "eslint": "^0.22.1",
     "jsdoc": "3.3.0-beta3",
     "jspm": "^0.15.6",
     "mocha": "^2.2.4",

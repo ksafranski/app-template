@@ -14,14 +14,15 @@ var config = {
   /**
    * Sets the config file defaults or throws
    */
-  setDefaults: function () {
+  setDefaults: function (cb) {
     var cfgPath = path.join(__dirname, '/../config.js');
-    if (fs.existsSync(cfgPath)) {
+    fs.exists(cfgPath, function (err) {
+      if (err) {
+        throw err;
+      }
       config.settings = require(cfgPath);
-      return;
-    }
-    // Throw error
-    throw 'Missing config';
+      cb();
+    });
   },
 
   /**
@@ -83,13 +84,15 @@ var config = {
     };
 
     // Load defaults
-    config.setDefaults();
+    config.setDefaults(function () {
+      // Start recursion
+      walk(config.settings, null);
+  
+      // Return settings
+      return config.settings;
+    });
 
-    // Start recursion
-    walk(config.settings, null);
-
-    // Return settings
-    return config.settings;
+    
   }
 
 };
