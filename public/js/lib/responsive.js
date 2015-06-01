@@ -1,13 +1,20 @@
 /**
- * General handlers for responsive elements
+ * @namespace dom
  */
-(function () {
+var dom = {
+  
   /**
-   * Handle toggle for responsive menu slider
+   * Initializes responsive menu listeners
+   * @method initResponsive
    */
-  var menuToggle = document.getElementsByClassName('header-menu-toggle')[0];
-  var menu = document.getElementsByClassName('header-menu')[0];
-  menuToggle.addEventListener('click', function () {
-    menu.classList.toggle('menu-open');
-  });
-})();
+  initResponsive: function () {
+    var menuToggle = document.getElementsByClassName('header-menu-toggle')[0];
+    var menu = document.getElementsByClassName('header-menu')[0];
+    menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('menu-open');
+    });
+  }
+  
+};
+
+export default dom;
