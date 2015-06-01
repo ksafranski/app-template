@@ -2,5 +2,6 @@
 	"preset": "crockford",
 	"validateIndentation": null,
 	"requireMultipleVarDecl": null,
-	"requireLineFeedAtFileEnd": null
+	"requireLineFeedAtFileEnd": null,
+	"esnext": true
 }
