@@ -59,6 +59,8 @@ Library](http://chaijs.com/).
 Running tests are the standard `npm run test` which also includes linting. It 
 can also be run independent of other tasks via `npm run mocha`.
 
+*Babel transpilation will be run before any tests are run via mocha.*
+
 ## Static Analysis
 
 ### Linting
