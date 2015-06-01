@@ -38,7 +38,18 @@ var config = {
 ```
 
 In the above case environment variables like `MYAPP_BAZ_QUZ=buzz` would change the 
-`config.baz.quz` property to `buzz`
+`config.baz.quz` property to `buzz`.
+
+## ES6(7) and Babel
+
+To allow for ES6/7, Babel is included in the dev dependencies and setup as the 
+`transpile` task in `package.json` all files in `/src` will be transpiled and 
+saved to `/lib`.
+
+## Front-End Dependencies
+
+The template uses [JSPM](http://jspm.io/) to manage front-end dependencies. New 
+dependencies follow the config in `/package.json` and are placed in `/public/vendor`.
 
 ## Tests
 
